@@ -1,0 +1,12 @@
+// Basic commands to be familiar with CLI azure
+
+az find secret  //to search for commands name
+
+// ***********Argruments******************
+
+az networking nsg -- help  // use the argument help to get a complete list of commands and subgroups of a group. 
+
+
+
+az login // to login into the azure account
+ijjkpiojkiop
