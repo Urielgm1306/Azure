@@ -1,0 +1,24 @@
+// To create a disk
+
+
+$rgName = (Get-AzResourceGroup | Where ResourceGroupName -Match "^az104-03a-rg4.*").ResourceGroupName
+
+$diskConfig = New-AzDiskConfig -Location EastUS -CreateOption Empty -DiskSizeGB 32 -Sku Standard_LRS
+
+$diskName = 'az104-03c-disk1'
+
+New-AzDisk -ResourceGroupName $rgName -DiskName $diskName -Disk $diskConfig
+
+
+
+
+//To review the disk 
+Get-AzDisk -ResourceGroupName $rgName -Name $diskName
+(Get-AzDisk -ResourceGroupName $rgName -Name $diskName).sku   // To get a specific parameter
+
+
+//To update the disk 
+New-AzDiskUpdateConfig -DiskSizeGB 64 | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
+
+
+
