@@ -1,0 +1,35 @@
+******** To Get help with one command use***************
+
+get-help new-azresourcegroup
+
+
+*********Install Windows PowerShell 7 ********************
+
+winget install --id Microsoft.Powershell --source winget
+winget install --id Microsoft.Powershell.Preview --source winget
+
+*********To loggin into your Azure account*************
+Connect-AzAccount
+
+*********Creting a resource group********************
+New-AzResourceGroup -Name 'myResourceGroup' -Location 'EastUS'
+
+
+
+***********Creating a Windows VM *************************
+
+New-AzVm `
+    -ResourceGroupName 'myResourceGroup' `
+    -Name 'myVM' `
+    -Location 'East US' `
+    -VirtualNetworkName 'myVnet' `
+    -SubnetName 'mySubnet' `
+    -SecurityGroupName 'myNetworkSecurityGroup' `
+    -PublicIpAddressName 'myPublicIpAddress' `
+    -OpenPorts 80,3389
+    
+ 
+ 
+ **********************Remove****************
+ 
+ Remove-AzResourceGroup -name name -force
