@@ -8,5 +8,4 @@ az networking nsg -- help  // use the argument help to get a complete list of co
 
 
 
-az login // to login into the azure account
-ijjkpiojkiop
+az login // to login into the azure accoun
