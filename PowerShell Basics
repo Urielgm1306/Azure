@@ -1,6 +1,7 @@
 ******** To Get help with one command use***************
 
 get-help new-azresourcegroup
+get-help new-azresourcegroup  -examples
 
 
 *********Install Windows PowerShell 7 ********************
@@ -8,8 +9,12 @@ get-help new-azresourcegroup
 winget install --id Microsoft.Powershell --source winget
 winget install --id Microsoft.Powershell.Preview --source winget
 
+
+
 *********To loggin into your Azure account*************
 Connect-AzAccount
+
+
 
 *********Creting a resource group********************
 New-AzResourceGroup -Name 'myResourceGroup' -Location 'EastUS'
