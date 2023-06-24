@@ -10,6 +10,14 @@ winget install --id Microsoft.Powershell --source winget
 winget install --id Microsoft.Powershell.Preview --source winget
 
 
+***********Check restrictions and set less restrictions******
+Get-ExecutionPolicy -List
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+***********Install AZ commdlets*********************
+Install-Module -Name Az -Repository PSGallery -Force
+
+
 
 *********To loggin into your Azure account*************
 Connect-AzAccount
@@ -24,13 +32,11 @@ New-AzResourceGroup -Name 'myResourceGroup' -Location 'EastUS'
 ***********Creating a Windows VM *************************
 
 New-AzVm `
-    -ResourceGroupName 'myResourceGroup' `
-    -Name 'myVM' `
-    -Location 'East US' `
-    -VirtualNetworkName 'myVnet' `
-    -SubnetName 'mySubnet' `
-    -SecurityGroupName 'myNetworkSecurityGroup' `
-    -PublicIpAddressName 'myPublicIpAddress' `
+    -ResourceGroupName 'RG1' `
+    -Name 'VM1' `
+    -Location 'westeurope' `
+    -SecurityGroupName 'NSG1' `
+    -PublicIpAddressName 'PIP1' `
     -OpenPorts 80,3389
     
  
