@@ -2,7 +2,7 @@
 
     $VMLocalAdminUser = "userazure"
     $VMLocalAdminSecurePassword = ConvertTo-SecureString "Azuretest1234." -AsPlainText -Force
-    $LocationName = "westeurope"
+    $LocationName = "UKsouth"
     $ResourceGroupName = "AZ104"
     $ComputerName = "VM-AZ104"
     $VMName = "VM-AZ104"
